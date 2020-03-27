@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class FrogBehaviour : MonoBehaviour
 {
-
+    public int tileSize;
     public GameObject grid;
     GridMechanism gm;
+    bool movedX, movedY;
 
     void Start()
     {
@@ -21,8 +22,29 @@ public class FrogBehaviour : MonoBehaviour
         {
             if (!movedX)
             {
+
+                int amountToMove = 0;
+
+                // Check to see where the next impassable tile is
+                if (Mathf.Sign(Input.GetAxisRaw("Horizontal")) == 1) {
+
+                    bool reached = false;
+
+                    for (int i = (int) gm.getPosF().x; i <= gm.gridW - 1; i++) {
+
+                        if (gm.getTile(new Vector2(i, gm.getPosF().y)) == 0 && !reached)
+                        {
+                            amountToMove++;
+                        }
+                        else { reached = true;  }
+
+                    }
+                }
+
+
+
                 transform.position = new Vector2(
-                    transform.position.x + (Mathf.Sign(Input.GetAxisRaw("Horizontal")) * tileSize),
+                    transform.position.x + (Mathf.Sign(Input.GetAxisRaw("Horizontal")) * tileSize * amountToMove),
                     transform.position.y); // Mathf.Sign() returns -1 or 1 depending on pos/neg, so this here is to move 
                                            // the correct direction
 
@@ -52,4 +74,4 @@ public class FrogBehaviour : MonoBehaviour
         else { movedY = false; }
     }
 }
-}
+

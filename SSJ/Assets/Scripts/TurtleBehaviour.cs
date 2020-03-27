@@ -7,11 +7,15 @@ public class TurtleBehaviour : MonoBehaviour
 
     // I apologize for the messy code ^^
 
+    public GameObject grid;
+    GridMechanism gm;
     public float tileSize; // Size of each tile of the grid
     bool movedX, movedY;
 
     void Start()
-    {}
+    {
+        gm = grid.GetComponent<GridMechanism>();
+    }
 
     void FixedUpdate()
     {

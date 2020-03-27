@@ -60,12 +60,16 @@ public class GridMechanism : MonoBehaviour
         
     }
 
-    int getTile(Vector2 tile)
+    public int getTile(Vector2 tile)
     {
-        return tiles[tile.x, tile.y];
+        return tiles[(int) tile.x, (int) tile.y];
 
     }
 
     public void setPosT (Vector2 pos) { tPos = pos; }
     public void setPosF (Vector2 pos) { fPos = pos; }
+
+    public Vector2 getPosT () { return tPos; }
+    public Vector2 getPosF () { return fPos; }
+
 }

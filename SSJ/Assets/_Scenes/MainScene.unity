@@ -348,6 +348,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcb21ae6e9accb4e87c47e9b5e85a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tileSize: 1
+  grid: {fileID: 537565202}
 --- !u!1 &1088383939
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2988f8358fa34449bbf176c83434fb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grid: {fileID: 537565202}
   tileSize: 1
 --- !u!212 &1088383941
 SpriteRenderer:
