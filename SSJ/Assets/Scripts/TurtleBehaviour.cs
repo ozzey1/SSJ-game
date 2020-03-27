@@ -24,6 +24,8 @@ public class TurtleBehaviour : MonoBehaviour
                     transform.position.y); // Mathf.Sign() returns -1 or 1 depending on pos/neg, so this here is to move 
                                            // the correct direction
 
+                gm.setPosT(new Vector2(transform.position.x, transform.position.y));
+
                 if (Mathf.Sign(Input.GetAxisRaw("Horizontal")) == 1) { transform.eulerAngles = new Vector3(0, 0, -90); }
                 else { transform.eulerAngles = new Vector3(0, 0, 90); }
             }

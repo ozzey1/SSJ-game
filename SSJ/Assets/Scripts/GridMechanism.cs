@@ -8,6 +8,7 @@ public class GridMechanism : MonoBehaviour
     public int gridW, gridH;
     int[,] tiles;
     GameObject[,] actualTiles;
+    Vector2 tPos, fPos; // Turtle and Frog Position
 
     public GameObject tilePassable, tileWater;
 
@@ -58,4 +59,13 @@ public class GridMechanism : MonoBehaviour
     {
         
     }
+
+    int getTile(Vector2 tile)
+    {
+        return tiles[tile.x, tile.y];
+
+    }
+
+    public void setPosT (Vector2 pos) { tPos = pos; }
+    public void setPosF (Vector2 pos) { fPos = pos; }
 }
