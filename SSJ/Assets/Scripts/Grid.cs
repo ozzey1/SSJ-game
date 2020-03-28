@@ -23,9 +23,9 @@ public class Grid : MonoBehaviour
 
     void CreateBoard()
     {
-        for (int i = 0; i < grid.Length; i++)
+        for (int i = 0; i < grid.GetLength(1); i++)
         {
-            for (int j = 0; j < grid[i].Length; j++)
+            for (int j = 0; j < grid.GetLength(2); j++)
             {
                 Vector3 pos = new Vector3(j, i, 0);
                 Quaternion rot = Quaternion.identity;

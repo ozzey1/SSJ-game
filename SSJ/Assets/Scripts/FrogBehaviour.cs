@@ -23,30 +23,30 @@ public class FrogBehaviour : MonoBehaviour
             if (!movedX)
             {
 
-                int amountToMove = 0;
 
-                // Check to see where the next impassable tile is
-                if (Mathf.Sign(Input.GetAxisRaw("Horizontal")) == 1) {
+                transform.position = new Vector2(
+                    transform.position.x + (Mathf.Sign(Input.GetAxisRaw("Horizontal")) * tileSize),
+                    transform.position.y); // Mathf.Sign() returns -1 or 1 depending on pos/neg, so this here is to move 
+                                           // the correct direction
 
-                    bool reached = false;
+                int tilesToMove = 0;
 
-                    for (int i = (int) gm.getPosF().x; i <= gm.gridW - 1; i++) {
-
-                        if (gm.getTile(new Vector2(i, gm.getPosF().y)) == 0 && !reached)
-                        {
-                            amountToMove++;
-                        }
-                        else { reached = true;  }
-
+                for (int i = (int) gm.getPosT().x + 1; i < gm.gridW; i++)
+                {
+                    print((gm.getPosT().x + 1) + " - " + gm.gridW);
+                    if (gm.getTile(new Vector2 (i, gm.getPosT().y)) == 0) {
+                        // Then be happy this worked
+                        tilesToMove++;
                     }
+                    else { break; }
                 }
 
 
 
-                transform.position = new Vector2(
-                    transform.position.x + (Mathf.Sign(Input.GetAxisRaw("Horizontal")) * tileSize * amountToMove),
-                    transform.position.y); // Mathf.Sign() returns -1 or 1 depending on pos/neg, so this here is to move 
-                                           // the correct direction
+
+                print(tilesToMove);
+
+
 
                 gm.setPosF (new Vector2(transform.position.x, transform.position.y));
 
