@@ -35,7 +35,7 @@ public class GridMove : MonoBehaviour
         if ((transform.position.x == frog.transform.position.x) && (transform.position.y == frog.transform.position.y))
         {
             together = true;
-            //turtle disappears(trigger
+            //turtle disappears
             GetComponent<SpriteRenderer>().enabled = false;
             //
         }
