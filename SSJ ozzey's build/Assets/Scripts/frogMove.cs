@@ -45,11 +45,6 @@ public class frogMove : MonoBehaviour
                         MM.Defeat();
                     }
 
-                    //detects contact with other characters
-                    if (Physics2D.OverlapCircle(moveTarget.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), .2f, characters))
-                    {
-
-                    }
 
                     //detects collions
                     if (!Physics2D.OverlapCircle(moveTarget.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), .2f, whatStopsMovement))
@@ -78,11 +73,6 @@ public class frogMove : MonoBehaviour
                         MM.Defeat();
                     }
 
-                    //detects contact with other characters
-                    if (Physics2D.OverlapCircle(moveTarget.position + new Vector3(Input.GetAxisRaw("Vertical"), 0f, 0f), .2f, characters))
-                    {
-
-                    }
 
                     if (!Physics2D.OverlapCircle(moveTarget.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), .2f, whatStopsMovement))
                     {

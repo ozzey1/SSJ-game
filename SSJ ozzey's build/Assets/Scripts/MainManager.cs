@@ -7,6 +7,7 @@ public class MainManager : MonoBehaviour
     public string[] charNames;
 
     public GameObject[] characters;
+    public GameObject turtle;
 
     public void Defeat()
     {
@@ -68,7 +69,9 @@ public class MainManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
+        
     }
+   
 }
 

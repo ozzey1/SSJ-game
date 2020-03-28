@@ -598,6 +598,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &166133872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4396188998003389911, guid: 4a33acb02116020478e7bb8c03384cb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4396188998418539769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &166133873
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166133872}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.024754286, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.13310905
 --- !u!1 &188545207
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,7 +847,7 @@ GameObject:
   - component: {fileID: 514708018}
   - component: {fileID: 514708017}
   - component: {fileID: 514708016}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: rock1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1212,6 +1234,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1115904408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1092951126154325257, guid: ec63a5173b4fd5f4eb26bd87621739fb,
+    type: 3}
+  m_PrefabInstance: {fileID: 117140138420126523}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1197471045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 132189391545823658, guid: 1699e5f44fbecea448d291ffa7b995ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 132189391162819599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &1197471046
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197471045}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1225
 --- !u!1 &1426303390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,6 +1904,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7960659125411593071, guid: ec63a5173b4fd5f4eb26bd87621739fb,
+        type: 3}
+      propertyPath: frog
+      value: 
+      objectReference: {fileID: 166133872}
+    - target: {fileID: 7960659125411593071, guid: ec63a5173b4fd5f4eb26bd87621739fb,
+        type: 3}
+      propertyPath: turtle
+      value: 
+      objectReference: {fileID: 1197471045}
     - target: {fileID: 8965489050127545919, guid: ec63a5173b4fd5f4eb26bd87621739fb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1918,6 +1978,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 132189391545823655, guid: 1699e5f44fbecea448d291ffa7b995ad,
+        type: 3}
+      propertyPath: MainManager
+      value: 
+      objectReference: {fileID: 1115904408}
+    - target: {fileID: 132189391545823655, guid: 1699e5f44fbecea448d291ffa7b995ad,
+        type: 3}
+      propertyPath: frog
+      value: 
+      objectReference: {fileID: 166133872}
     - target: {fileID: 132189391545823656, guid: 1699e5f44fbecea448d291ffa7b995ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1977,6 +2047,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: turtle
+      objectReference: {fileID: 0}
+    - target: {fileID: 132189391545823658, guid: 1699e5f44fbecea448d291ffa7b995ad,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1699e5f44fbecea448d291ffa7b995ad, type: 3}
@@ -2042,10 +2117,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4396188998003389910, guid: 4a33acb02116020478e7bb8c03384cb5,
+        type: 3}
+      propertyPath: MainManager
+      value: 
+      objectReference: {fileID: 1115904408}
+    - target: {fileID: 4396188998003389910, guid: 4a33acb02116020478e7bb8c03384cb5,
+        type: 3}
+      propertyPath: stopTurtle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4396188998003389911, guid: 4a33acb02116020478e7bb8c03384cb5,
         type: 3}
       propertyPath: m_Name
       value: frog
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396188998003389911, guid: 4a33acb02116020478e7bb8c03384cb5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a33acb02116020478e7bb8c03384cb5, type: 3}
